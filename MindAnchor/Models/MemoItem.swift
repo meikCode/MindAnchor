@@ -21,6 +21,12 @@ public final class MemoItem {
     public var isCompleted: Bool
     public var completedAt: Date?
 
+    @Relationship
+    public var category: CategoryTag?
+
+    @Relationship(deleteRule: .cascade, inverse: \SubtaskItem.memo)
+    public var subtasks: [SubtaskItem]? = []
+
     public init(
         id: UUID = UUID(),
         title: String,
@@ -28,7 +34,8 @@ public final class MemoItem {
         createdAt: Date = Date(),
         dueDate: Date? = nil,
         priority: PriorityLevel = .medium,
-        isCompleted: Bool = false
+        isCompleted: Bool = false,
+        category: CategoryTag? = nil
     ) {
         self.id = id
         self.title = title
@@ -37,11 +44,22 @@ public final class MemoItem {
         self.dueDate = dueDate
         self.priorityRaw = priority.rawValue
         self.isCompleted = isCompleted
+        self.category = category
     }
 
     public var priority: PriorityLevel {
         get { PriorityLevel(rawValue: priorityRaw) ?? .medium }
         set { priorityRaw = newValue.rawValue }
+    }
+
+    public var subtaskList: [SubtaskItem] {
+        subtasks?.sorted { $0.orderIndex < $1.orderIndex } ?? []
+    }
+
+    public var completionProgress: Double {
+        let list = subtaskList
+        guard !list.isEmpty else { return isCompleted ? 1.0 : 0.0 }
+        return Double(list.filter { $0.isCompleted }.count) / Double(list.count)
     }
 
     public var isOverdue: Bool {
