@@ -26,7 +26,7 @@ struct MindAnchorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Text("MindAnchor - Initialisiere SwiftData...")
+            MemoListView()
         }
         .modelContainer(sharedModelContainer)
     }
