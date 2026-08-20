@@ -26,6 +26,21 @@ public struct MemoListView: View {
                     MemoRowView(item: item) {
                         withAnimation { item.toggleCompletion() }
                     }
+                    .swipeActions(edge: .leading) {
+                        Button {
+                            withAnimation { item.toggleCompletion() }
+                        } label: {
+                            Label(item.isCompleted ? "Wiedereröffnen" : "Erledigt", systemImage: item.isCompleted ? "arrow.uturn.backward" : "checkmark")
+                        }
+                        .tint(.green)
+                    }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            modelContext.delete(item)
+                        } label: {
+                            Label("Löschen", systemImage: "trash")
+                        }
+                    }
                 }
             }
             .navigationTitle("MindAnchor")
