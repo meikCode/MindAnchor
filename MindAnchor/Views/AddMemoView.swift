@@ -54,6 +54,7 @@ public struct AddMemoView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Speichern") { saveMemo() }
+                        .disabled(title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
             }
             .onAppear {
@@ -63,10 +64,11 @@ public struct AddMemoView: View {
     }
 
     private func saveMemo() {
-        guard !title.isEmpty else { return }
+        let trimmed = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
         let memo = MemoItem(
-            title: title,
-            notes: notes,
+            title: trimmed,
+            notes: notes.trimmingCharacters(in: .whitespacesAndNewlines),
             dueDate: hasDueDate ? dueDate : nil,
             priority: priority,
             category: selectedCategory
