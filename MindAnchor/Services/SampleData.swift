@@ -123,6 +123,7 @@ public struct SampleData {
             notes: "Studienergebnisse, SwiftData-Architektur und XCTest-Validierung für die Modulabgabe dokumentieren.",
             dueDate: Calendar.current.date(byAdding: .day, value: 2, to: Date()),
             priority: .urgent,
+            hasReminder: true,
             category: catStudium
         )
         context.insert(memo1)
@@ -138,6 +139,7 @@ public struct SampleData {
             notes: "Frisches Gemüse, Hafermilch und Obst für die Woche besorgen.",
             dueDate: Calendar.current.date(byAdding: .day, value: 1, to: Date()),
             priority: .medium,
+            hasReminder: false,
             category: catPrivat
         )
         context.insert(memo2)
@@ -150,6 +152,7 @@ public struct SampleData {
             notes: "Prüfung der REST-Endpunkte auf Idempotenz und Auth-Header.",
             dueDate: Calendar.current.date(byAdding: .hour, value: 4, to: Date()),
             priority: .high,
+            hasReminder: true,
             category: catArbeit
         )
         context.insert(memo3)
@@ -159,6 +162,7 @@ public struct SampleData {
             notes: "Belege für Fachtagung scannen und im Portal hochladen.",
             dueDate: Calendar.current.date(byAdding: .day, value: 5, to: Date()),
             priority: .medium,
+            hasReminder: false,
             category: catArbeit
         )
         context.insert(memo4)
@@ -169,6 +173,7 @@ public struct SampleData {
             dueDate: Calendar.current.date(byAdding: .day, value: 3, to: Date()),
             priority: .low,
             isCompleted: true,
+            hasReminder: false,
             category: catGesundheit
         )
         context.insert(memo5)
@@ -183,6 +188,7 @@ public struct SampleData {
             notes: "Studienergebnisse, SwiftData-Architektur und XCTest-Validierung für die Modulabgabe dokumentieren.",
             dueDate: Calendar.current.date(byAdding: .day, value: 2, to: Date()),
             priority: .urgent,
+            hasReminder: true,
             category: cat
         )
         let sub1 = SubtaskItem(title: "Theoriekapitel schreiben", isCompleted: true, orderIndex: 0)

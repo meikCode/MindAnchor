@@ -2,7 +2,7 @@
 //  MemoItem.swift
 //  MindAnchor
 //
-//  Created by Meik Eisenbraun on 15.08.2026.
+//  Created by Meik Eisenbraun on 17.08.2026.
 //
 
 import Foundation
@@ -20,6 +20,8 @@ public final class MemoItem {
     public var priorityRaw: Int
     public var isCompleted: Bool
     public var completedAt: Date?
+    // Nachträglich für lokale Mitteilungen via UNUserNotificationCenter ergänzt
+    public var hasReminder: Bool
 
     @Relationship
     public var category: CategoryTag?
@@ -35,6 +37,7 @@ public final class MemoItem {
         dueDate: Date? = nil,
         priority: PriorityLevel = .medium,
         isCompleted: Bool = false,
+        hasReminder: Bool = false,
         category: CategoryTag? = nil
     ) {
         self.id = id
@@ -44,6 +47,7 @@ public final class MemoItem {
         self.dueDate = dueDate
         self.priorityRaw = priority.rawValue
         self.isCompleted = isCompleted
+        self.hasReminder = hasReminder
         self.category = category
     }
 
@@ -59,7 +63,8 @@ public final class MemoItem {
     public var completionProgress: Double {
         let list = subtaskList
         guard !list.isEmpty else { return isCompleted ? 1.0 : 0.0 }
-        return Double(list.filter { $0.isCompleted }.count) / Double(list.count)
+        let completedCount = list.filter { $0.isCompleted }.count
+        return Double(completedCount) / Double(list.count)
     }
 
     public var isOverdue: Bool {
