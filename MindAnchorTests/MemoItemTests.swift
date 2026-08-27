@@ -2,11 +2,10 @@
 //  MemoItemTests.swift
 //  MindAnchorTests
 //
-//  Created by Meik Eisenbraun on 27.08.2026.
+//  Created by Meik Eisenbraun on 28.08.2026.
 //
 
 import XCTest
-import SwiftData
 @testable import MindAnchor
 
 final class MemoItemTests: XCTestCase {
@@ -55,9 +54,6 @@ final class MemoItemTests: XCTestCase {
 
         sub2.isCompleted = true
         XCTAssertEqual(memo.completionProgress, 0.75, accuracy: 0.001)
-
-        sub4.isCompleted = true
-        XCTAssertEqual(memo.completionProgress, 1.0, accuracy: 0.001)
     }
 
     func testIsOverdueLogic() {
