@@ -18,7 +18,7 @@ public struct MemoDetailView: View {
 
     @State private var newSubtaskTitle: String = ""
     // Feedback P2: confirmationDialog schützt vor versehentlichem Löschen verknüpfter Subtasks
-    // showingDeleteConfirmation added in later feedback commit
+    @State private var showingDeleteConfirmation: Bool = false
 
     public init(item: MemoItem) {
         self.item = item
@@ -154,7 +154,7 @@ public struct MemoDetailView: View {
                 }
                 .font(.footnote)
 
-                Button(role: .destructive, action: { NotificationManager.shared.cancelReminder(for: item); modelContext.delete(item); dismiss() }) {
+                Button(role: .destructive, action: { showingDeleteConfirmation = true }) {
                     HStack {
                         Spacer()
                         Image(systemName: "trash")
@@ -166,7 +166,13 @@ public struct MemoDetailView: View {
         }
         .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)
-
+        .confirmationDialog("Möchtest du diese Notiz unwiderruflich löschen?", isPresented: $showingDeleteConfirmation, titleVisibility: .visible) {
+            Button("Löschen", role: .destructive) {
+                NotificationManager.shared.cancelReminder(for: item)
+                modelContext.delete(item)
+                dismiss()
+            }
+        }
     }
 
     // TODO: Manuelle Subtask-Umsortierung via .onMove(perform:) für v2.0 evaluieren
