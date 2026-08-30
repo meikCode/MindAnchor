@@ -100,5 +100,3 @@ public struct MemoRowView: View {
         .padding(.vertical, 4)
     }
 }
-
-// Dynamic Type: verified with Accessibility Inspector AX5
