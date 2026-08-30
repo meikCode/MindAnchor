@@ -51,7 +51,8 @@ public struct MemoListView: View {
                                 }
                                 .tint(.green)
                             }
-                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            // Feedback P2: confirmationDialog schützt vor versehentlichem Löschen verknüpfter Subtasks
+                            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 Button(role: .destructive) {
                                     deleteMemo(item)
                                 } label: {

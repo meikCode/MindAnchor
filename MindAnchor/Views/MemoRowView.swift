@@ -41,7 +41,7 @@ public struct MemoRowView: View {
 
                     // Prioritäts-Badge
                     Text(item.priority.shortLabel)
-                        .font(.system(size: 10, weight: .bold))
+                        .font(.caption2.weight(.bold))
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
                         .background(item.priority.color.opacity(0.15))
@@ -61,9 +61,9 @@ public struct MemoRowView: View {
                     if let category = item.category {
                         HStack(spacing: 3) {
                             Image(systemName: category.iconName)
-                                .font(.system(size: 9))
+                                .font(.caption2)
                             Text(category.name)
-                                .font(.system(size: 10, weight: .medium))
+                                .font(.caption2.weight(.medium))
                         }
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
@@ -75,9 +75,9 @@ public struct MemoRowView: View {
                     if let dueDate = item.dueDate {
                         HStack(spacing: 3) {
                             Image(systemName: "calendar")
-                                .font(.system(size: 9))
+                                .font(.caption2)
                             Text(dueDate.formatted(date: .abbreviated, time: .omitted))
-                                .font(.system(size: 10))
+                                .font(.caption2)
                         }
                         .foregroundColor(item.isOverdue ? .red : (item.isDueToday ? .orange : .secondary))
                     }
@@ -85,9 +85,9 @@ public struct MemoRowView: View {
                     if !item.subtaskList.isEmpty {
                         HStack(spacing: 4) {
                             Image(systemName: "checklist")
-                                .font(.system(size: 9))
+                                .font(.caption2)
                             Text("\(item.subtaskList.filter { $0.isCompleted }.count)/\(item.subtaskList.count)")
-                                .font(.system(size: 10, weight: .medium))
+                                .font(.caption2.weight(.medium))
                         }
                         .foregroundColor(.secondary)
                     }
