@@ -23,21 +23,15 @@ Die Anwendung ermöglicht das blitzschnelle Festhalten, Strukturieren und Priori
 * **Plattform:** iOS 17.0+ (getestet bis iOS 26 SDK / iPhone 17 Pro)
 * **Sprache & Frameworks:** Swift 5.9, SwiftUI, SwiftData, Swift Charts, UserNotifications, Swift Concurrency (`@MainActor`)
 * **Architektur:** Model-View-ViewModel (MVVM) mit `@Observable`-Makro
-* **Testabdeckung:** 14 automatisierte XCTest-Unittests mit 50 Assertions (Modelle, Relationen, ViewModels, Sortierung, Filterung, Quadranten)
+* **Testabdeckung:** 16 automatisierte XCTest-Unittests mit 61 Assertions (Modelle, Relationen, SwiftData-Persistenz & Löschkaskade, ViewModels, Sortierung, Filterung, Quadranten)
 
 ---
 
 ## 🚀 Bauen und Ausführen
 
-1. **Voraussetzungen:** macOS mit Xcode 15+ (empfohlen: Xcode 16/26) und optional `xcodegen`.
-2. **Projekt öffnen:**
-   * Entweder direkt `MindAnchor.xcodeproj` in Xcode öffnen.
-   * Oder das Projekt via XcodeGen neu generieren:
-     ```bash
-     xcodegen generate
-     open MindAnchor.xcodeproj
-     ```
-3. **Ausführen:** Im Xcode-Target `MindAnchor` wählen und auf einem iOS-Simulator (z. B. iPhone 16/17 Pro) starten (`Cmd + R`).
+1. **Voraussetzungen:** macOS mit Xcode 15+ (getestet mit Xcode 16/26 auf iOS 17.0+ Simulator).
+2. **Projekt öffnen:** `MindAnchor.xcodeproj` direkt in Xcode öffnen (`open MindAnchor.xcodeproj`).
+3. **Ausführen:** Im Xcode-Target `MindAnchor` wählen und auf einem iOS-Simulator (z. B. iPhone 17 Pro / iPhone 16) starten (`Cmd + R`).
 4. **Tests ausführen:** `Cmd + U` in Xcode oder via Terminal:
    ```bash
    xcodebuild test -project MindAnchor.xcodeproj -scheme MindAnchor -destination 'platform=iOS Simulator,name=iPhone 17 Pro'

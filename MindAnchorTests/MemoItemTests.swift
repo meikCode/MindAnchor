@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SwiftData
 @testable import MindAnchor
 
 final class MemoItemTests: XCTestCase {
@@ -54,6 +55,9 @@ final class MemoItemTests: XCTestCase {
 
         sub2.isCompleted = true
         XCTAssertEqual(memo.completionProgress, 0.75, accuracy: 0.001)
+
+        sub4.isCompleted = true
+        XCTAssertEqual(memo.completionProgress, 1.0, accuracy: 0.001)
     }
 
     func testIsOverdueLogic() {
@@ -76,5 +80,55 @@ final class MemoItemTests: XCTestCase {
         XCTAssertTrue(PriorityLevel.high < PriorityLevel.urgent)
         XCTAssertEqual(PriorityLevel.urgent.shortLabel, "P1")
         XCTAssertEqual(PriorityLevel.low.shortLabel, "P4")
+    }
+
+    @MainActor
+    func testSwiftDataPersistenceAndCascadeDelete() throws {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: MemoItem.self, CategoryTag.self, SubtaskItem.self, configurations: config)
+        let context = container.mainContext
+
+        let memo = MemoItem(title: "Hauptaufgabe mit Subtasks")
+        let sub1 = SubtaskItem(title: "Teilaufgabe 1", orderIndex: 0)
+        let sub2 = SubtaskItem(title: "Teilaufgabe 2", orderIndex: 1)
+        memo.subtasks = [sub1, sub2]
+
+        context.insert(memo)
+        try context.save()
+
+        let memoFetch = FetchDescriptor<MemoItem>()
+        var memos = try context.fetch(memoFetch)
+        XCTAssertEqual(memos.count, 1)
+        XCTAssertEqual(memos.first?.subtasks?.count, 2)
+
+        context.delete(memo)
+        try context.save()
+
+        memos = try context.fetch(memoFetch)
+        XCTAssertEqual(memos.count, 0)
+
+        let subFetch = FetchDescriptor<SubtaskItem>()
+        let remainingSubtasks = try context.fetch(subFetch)
+        XCTAssertEqual(remainingSubtasks.count, 0, "Subtasks müssen bei Löschung der Hauptaufgabe per Cascade Delete entfernt werden.")
+    }
+
+    @MainActor
+    func testSwiftDataPredicateFiltering() throws {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: MemoItem.self, configurations: config)
+        let context = container.mainContext
+
+        let activeMemo = MemoItem(title: "Aktive Aufgabe", isCompleted: false)
+        let completedMemo = MemoItem(title: "Erledigte Aufgabe", isCompleted: true)
+        context.insert(activeMemo)
+        context.insert(completedMemo)
+        try context.save()
+
+        let predicate = #Predicate<MemoItem> { !$0.isCompleted }
+        let fetchDesc = FetchDescriptor<MemoItem>(predicate: predicate)
+        let activeItems = try context.fetch(fetchDesc)
+
+        XCTAssertEqual(activeItems.count, 1)
+        XCTAssertEqual(activeItems.first?.title, "Aktive Aufgabe")
     }
 }
