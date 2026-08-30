@@ -1,0 +1,152 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project ProjektApple2/MindAnchor/MindAnchor.xcodeproj -target MindAnchorTests -sdk iphonesimulator -configuration Debug build
+
+Build settings from command line:
+    SDKROOT = iphonesimulator26.5
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'MindAnchorTests' in project 'MindAnchor'
+        ➜ Explicit dependency on target 'MindAnchor' in project 'MindAnchor'
+    Target 'MindAnchor' in project 'MindAnchor' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 843fe844e7aa5ca5b61019c820e05a1a
+Build description path: /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/XCBuildData/843fe844e7aa5ca5b61019c820e05a1a.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk /var/folders/tw/b5rtz_3s77vfffj38m3vkxbw0000gn/C/com.apple.DeveloperTools/26.6-17F113/Xcode/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-6cfe768891a92b912361537c460fe42b.sdkstatcache
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/MindAnchor.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -o /var/folders/tw/b5rtz_3s77vfffj38m3vkxbw0000gn/C/com.apple.DeveloperTools/26.6-17F113/Xcode/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-6cfe768891a92b912361537c460fe42b.sdkstatcache
+
+MkDir /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /bin/mkdir -p /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest
+
+MkDir /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /bin/mkdir -p /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns
+
+MkDir /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /bin/mkdir -p /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+ProcessInfoPlistFile /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Info.plist /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchor.build/empty-MindAnchor.plist (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-infoPlistUtility /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchor.build/empty-MindAnchor.plist -producttype com.apple.product-type.application -genpkginfo /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Info.plist
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/libXCTestBundleInject.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestBundleInject.dylib (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestBundleInject.dylib /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/XCUIAutomation.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/XCTestSupport.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/XCUnit.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/XCTestCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/XCTest.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/XCTAutomationSupport.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+Copy /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks/Testing.framework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks
+
+CopySwiftLibs /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/MindAnchor --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/SystemExtensions --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchor.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+CreateUniversalBinary /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/MindAnchorTests normal arm64\ x86_64 (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/arm64/Binary/MindAnchorTests /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/x86_64/Binary/MindAnchorTests -output /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/MindAnchorTests
+
+ProcessInfoPlistFile /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Info.plist /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/empty-MindAnchorTests.plist (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-infoPlistUtility /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/empty-MindAnchorTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Info.plist
+
+ExtractAppIntentsMetadata (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name MindAnchorTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier de.meikeisenbraun.MindAnchorTests --output /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest --target-triple arm64-apple-ios17.0-simulator --target-triple x86_64-apple-ios17.0-simulator --binary-file /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/MindAnchorTests --dependency-file /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/arm64/MindAnchorTests_dependency_info.dat --dependency-file /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/x86_64/MindAnchorTests_dependency_info.dat --stringsdata-file /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/arm64/MindAnchorTests.SwiftFileList --source-file-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/x86_64/MindAnchorTests.SwiftFileList --metadata-file-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/MindAnchorTests.DependencyMetadataFileList --static-metadata-file-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/MindAnchorTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/arm64/MindAnchorTests.SwiftConstValuesFileList --swift-const-vals-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/Objects-normal/x86_64/MindAnchorTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-08-30 18:25:46.127 appintentsmetadataprocessor[27816:789568] Starting appintentsmetadataprocessor export
+2026-08-30 18:25:46.134 appintentsmetadataprocessor[27816:789568] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/MindAnchorTests --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Frameworks --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/PlugIns --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/SystemExtensions --scan-folder /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+AppIntentsSSUTraining (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Info.plist --temp-dir-path /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/ssu --bundle-id de.meikeisenbraun.MindAnchorTests --product-path /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest --extracted-metadata-path /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Metadata.appintents --metadata-file-list /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/MindAnchor.build/Debug-iphonesimulator/MindAnchorTests.build/MindAnchorTests.DependencyMetadataFileList --source-file /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest/Info.plist --archive-ssu-assets
+2026-08-30 18:25:46.152 appintentsnltrainingprocessor[27817:789569] Parsing options for appintentsnltrainingprocessor
+2026-08-30 18:25:46.152 appintentsnltrainingprocessor[27817:789569] Starting AppIntents SSU YAML Generation
+2026-08-30 18:25:46.153 appintentsnltrainingprocessor[27817:789569] No AppShortcuts found - Skipping.
+
+CodeSign /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest
+
+RegisterExecutionPolicyException /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-RegisterExecutionPolicyException /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest
+
+Touch /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest (in target 'MindAnchorTests' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    /usr/bin/touch -c /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app/PlugIns/MindAnchorTests.xctest
+
+CodeSign /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app
+/Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app: replacing existing signature
+
+Validate /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app (in target 'MindAnchor' from project 'MindAnchor')
+    cd /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor
+    builtin-validationUtility /Users/meikeisenbraun/PycharmProjects/iuAbgaben/ProjektApple2/MindAnchor/build/Debug-iphonesimulator/MindAnchor.app -shallow-bundle -infoplist-subpath Info.plist
+
+warning: ONLY_ACTIVE_ARCH=YES requested with multiple ARCHS and no active architecture could be computed; building for all applicable architectures (in target 'MindAnchorTests' from project 'MindAnchor')
+warning: ONLY_ACTIVE_ARCH=YES requested with multiple ARCHS and no active architecture could be computed; building for all applicable architectures (in target 'MindAnchor' from project 'MindAnchor')
+** BUILD SUCCEEDED **
+
+BUILD SUCCEEDED
