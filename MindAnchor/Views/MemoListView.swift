@@ -2,7 +2,7 @@
 //  MemoListView.swift
 //  MindAnchor
 //
-//  Created by Meik Eisenbraun on 21.08.2026.
+//  Created by Meik Eisenbraun on 19.08.2026.
 //
 
 import SwiftUI

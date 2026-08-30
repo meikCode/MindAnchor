@@ -60,6 +60,16 @@ public enum PriorityLevel: Int, Codable, CaseIterable, Comparable, Sendable, Ide
         self == .urgent || self == .high
     }
 
+    /// Eisenhower-Quadrant als lesbare Beschriftung für EisenhowerMatrixView.
+    public var quadrant: String {
+        switch (isUrgent, isImportant) {
+        case (true,  true):  return "I – Sofort erledigen"
+        case (false, true):  return "II – Einplanen"
+        case (true,  false): return "III – Delegieren"
+        case (false, false): return "IV – Eliminieren"
+        }
+    }
+
     public static func < (lhs: PriorityLevel, rhs: PriorityLevel) -> Bool {
         lhs.rawValue < rhs.rawValue
     }

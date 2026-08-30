@@ -2,7 +2,7 @@
 //  AddMemoView.swift
 //  MindAnchor
 //
-//  Created by Meik Eisenbraun on 24.08.2026.
+//  Created by Meik Eisenbraun on 21.08.2026.
 //
 
 import SwiftUI
@@ -14,6 +14,9 @@ public struct AddMemoView: View {
     @Environment(\.dismiss) private var dismiss
 
     @Query(sort: \CategoryTag.name) private var categories: [CategoryTag]
+
+    private enum Field { case title }
+    @FocusState private var focusedField: Field?
 
     @State private var title: String
     @State private var notes: String
@@ -45,6 +48,8 @@ public struct AddMemoView: View {
                 Section(header: Text("Titel & Kategorie")) {
                     TextField("Was möchtest du dir merken?", text: $title)
                         .font(.body)
+                        .focused($focusedField, equals: .title)
+                        .onAppear { focusedField = .title }
 
                     Picker("Kategorie", selection: $selectedCategory) {
                         Text("Keine").tag(nil as CategoryTag?)
